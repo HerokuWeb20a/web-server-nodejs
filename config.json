@@ -1,0 +1,9 @@
+{
+    "host": "localhost",
+    "port": 3000,
+    "sivut": {
+        "kansio": "sivut",
+        "valikko": "valikko.html",
+        "paneeli": "paneeli.html"
+    }
+}
