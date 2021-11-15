@@ -25,7 +25,7 @@ h3{
 }
 body{
     font: var(--font);
-    background-color: var(--secondary-color);
+    background-color: white;
 }
 .button:hover span{
     color: var(--link-color);
@@ -40,14 +40,22 @@ td,th{
     padding: 0.5em;
 }
 header{
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     justify-content: center;
     display: flex;
     padding: 25px;
 }
 button{
     padding: 10px;
-    background-color: var(--link-color);
+    background-color: white;
+    color: var(--primary-color);
     border-radius: 0.5em;
-    border-color: black;
+    border-color: var(--primary-color);
+}
+button:hover{
+    background-color: var(--primary-color);
+    color: var(--link-color);
+}
+link{
+    color: var(--link-color);
 }
