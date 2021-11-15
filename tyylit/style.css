@@ -27,10 +27,6 @@ body{
     font: var(--font);
     background-color: white;
 }
-.button:hover span{
-    color: var(--link-color);
-    background-color: var(--primary-color);
-}
 table{
     border-collapse: collapse;
     margin-bottom: 1em;
