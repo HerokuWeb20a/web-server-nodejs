@@ -6,7 +6,7 @@
         try{
             const data = await fetch('/paneeli'); 
             const paneelit = await data.json();
-            const paneeliData=document.getElementById('paneeliData');
+            const paneeliData = document.getElementById('paneeliData');
             for(let paneeli of paneelit){
                 const tr = document.createElement('tr');
                 tr.appendChild(teeSolu(paneeli.id));
