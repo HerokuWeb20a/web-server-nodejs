@@ -4,7 +4,7 @@
 
     async function alusta(){
         try{
-            const data = await fetch('/kaikki'); 
+            const data = await fetch('/paneeli'); 
             const paneelit = await data.json();
             const paneeliData=document.getElementById('paneeliData');
             for(let paneeli of paneelit){
