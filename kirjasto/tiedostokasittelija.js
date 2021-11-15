@@ -7,6 +7,9 @@ const tiedostotyypit = {
     '.css': { tyyppi: 'text/css', koodaus: 'utf8' },
     '.json': { tyyppi: 'application/json', koodaus: 'utf8' },
     '.png': { tyyppi: 'image/png', koodaus: 'binary' },
+    '.jpg': { tyyppi: 'image/jpeg', koodaus: 'binary' },
+    '.jpeg': { tyyppi: 'image/jpeg', koodaus: 'binary' },
+    '.gif': { tyyppi: 'image/gif', koodaus: 'binary' },
     '.ico': { tyyppi: 'image/vnd.microsoft.icon', koodaus: 'binary' }
 }
 

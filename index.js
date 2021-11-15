@@ -12,6 +12,7 @@ const resurssiReitit = ['/tyylit/'];
 const sivutkansio = path.join(__dirname, sivut.kansio);
 const valikkoPolku = path.join(sivutkansio, sivut.valikko);
 const paneeliPolku = path.join(sivutkansio, sivut.paneeli);
+const piirustusPolku = path.join(sivutkansio, sivut.piirustus);
 
 const server = http.createServer(async (req, res) => {
     const { pathname } = new URL(`http://${host}:${port}${req.url}`);
@@ -24,6 +25,8 @@ const server = http.createServer(async (req, res) => {
                 laheta(res, await lue(valikkoPolku), 200);
             } else if (reitti === '/paneeli') {
                 laheta(res, await lue(paneeliPolku), 200);
+            } else if (reitti === '/piirustus') {
+                laheta(res, await lue(piirustusPolku), 200);
             } else if (onJoukossa(reitti, ...resurssiReitit)) {
                 const resurssi = await lue(path.join(__dirname, reitti));
                 laheta(res, resurssi, 200);

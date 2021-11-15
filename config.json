@@ -4,6 +4,7 @@
     "sivut": {
         "kansio": "sivut",
         "valikko": "valikko.html",
-        "paneeli": "paneeli.html"
+        "paneeli": "paneeli.html",
+        "piirustus": "piirustus.html"
     }
 }
