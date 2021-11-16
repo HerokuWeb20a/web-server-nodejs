@@ -28,6 +28,7 @@ h3 {
 }
 
 body {
+    font-family: var(--font);
     background-color: white;
 }
 
@@ -36,7 +37,7 @@ table {
     margin-bottom: 1em;
 }
 
-td,th {
+td, th {
     border: 1px solid var(--primary-color);
     padding: 0.5em;
 }
@@ -52,7 +53,7 @@ button {
     padding: 10px;
     background-color: white;
     color: var(--primary-color);
-    border-radius: 0.5em;
+    border-radius: 5px;
     border-color: var(--primary-color);
 }
 
