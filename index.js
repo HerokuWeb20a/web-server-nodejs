@@ -41,7 +41,7 @@ const server = http.createServer(async (req, res) => {
 
 server.listen(port, (err) => {
     if (!err) {
-        console.log(`Listening server ${host}:${port}`);
+        console.log(`Listening ${host}:${port}`);
     } else {
         console.log(`[ERROR]: ${err}`);
     }

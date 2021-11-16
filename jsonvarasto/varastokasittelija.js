@@ -12,8 +12,8 @@ async function lueVarasto(varastoTiedosto) {
     }
 }
 
-async function kirjoitaVarasto(varastoTiedosto,data){
-    try{
+async function kirjoitaVarasto(varastoTiedosto,data) {
+    try {
         await fs.writeFile(varastoTiedosto, 
             JSON.stringify(data,null,4), {
                 encoding:'utf8',
@@ -21,10 +21,9 @@ async function kirjoitaVarasto(varastoTiedosto,data){
             });
 
         return true;
-    }
-    catch(virhe){
+    } catch(virhe) {
         return false;
     }
 }
 
-module.exports={lueVarasto, kirjoitaVarasto};
+module.exports = { lueVarasto, kirjoitaVarasto };

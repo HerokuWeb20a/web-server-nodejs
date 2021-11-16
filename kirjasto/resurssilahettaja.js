@@ -7,11 +7,13 @@ function laheta(res, data, statuskoodi) {
     res.end(data.tiedostoData, data.tiedosto.koodaus);
 }
 
-function lahetaJson(res, jsonresurssi, statuskoodi){
+function lahetaJson(res, jsonresurssi, statuskoodi) {
     const jsonData = JSON.stringify(jsonresurssi);
+
     res.writeHead(statuskoodi, {
         'Content-Type':'application/json'
     });
+
     res.end(jsonData);
 }
 
