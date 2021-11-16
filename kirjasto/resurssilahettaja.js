@@ -7,18 +7,6 @@ function laheta(res, data, statuskoodi) {
     res.end(data.tiedostoData, data.tiedosto.koodaus);
 }
 
-function lahetaJson(res, jsonresurssi, statuskoodi){
-    const jsonData = JSON.stringify(jsonresurssi);
-    res.writeHead(statuskoodi, {
-        'Content-Type':'application/json'
-    });
-    res.end(jsonData);
-}
-
-function lahetaStatus(res, viesti, statuskoodi=404){
-    lahetaJson(res,{viesti},statuskoodi);
-}
-
 function onJoukossa(reitti, ...reittienAlkuosat) {
     for (let alku of reittienAlkuosat) {
         if (reitti.startsWith(alku)) {
@@ -29,4 +17,4 @@ function onJoukossa(reitti, ...reittienAlkuosat) {
     return false;
 }
 
-module.exports = { laheta, onJoukossa, lahetaJson, lahetaStatus };
+module.exports = { laheta, onJoukossa };
