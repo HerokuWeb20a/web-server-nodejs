@@ -10,7 +10,7 @@ const tiedostotyypit = {
     '.jpg': { tyyppi: 'image/jpeg', koodaus: 'binary' },
     '.jpeg': { tyyppi: 'image/jpeg', koodaus: 'binary' },
     '.gif': { tyyppi: 'image/gif', koodaus: 'binary' },
-    '.svg': { tyyppi: 'image/svg', koodaus: 'binary' },
+    '.svg': { tyyppi: 'image/svg+xml', koodaus: 'binary' },
     '.ico': { tyyppi: 'image/vnd.microsoft.icon', koodaus: 'binary' }
 }
 
