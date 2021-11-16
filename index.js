@@ -8,23 +8,23 @@ const kirjastopolku = path.join(__dirname, 'kirjasto');
 const { lue } = require(path.join(kirjastopolku, 'tiedostokasittelija'));
 const { laheta, onJoukossa, lahetaJson } = require(path.join(kirjastopolku, 'resurssilahettaja'));
 
-const resurssiReitit = ['/tyylit/','/js/','/img/'];
-
 const sivutkansio = path.join(__dirname, sivut.kansio);
 const valikkoPolku = path.join(sivutkansio, sivut.valikko);
 const paneeliPolku = path.join(sivutkansio, sivut.paneeli);
 const piirustusPolku = path.join(sivutkansio, sivut.piirustus);
+
+const Tietovarasto = 
+require(path.join(__dirname,varastokansio,'tietovarastokerros'));
+
+const varasto=new Tietovarasto();
+
+const resurssiReitit = ['/tyylit/','/js/','/img/'];
 
 
 const server = http.createServer(async (req, res) => {
     const { pathname } = new URL(`http://${host}:${port}${req.url}`);
     const reitti = decodeURIComponent(pathname);
     const metodi = req.method.toUpperCase();
-
-    const Tietovarasto = 
-    require(path.join(__dirname,varastokansio,'tietovarastokerros'));
-
-    const varasto=new Tietovarasto();
 
     if (metodi === 'GET') {
         try {
