@@ -1,6 +1,7 @@
 {
     "host": "localhost",
     "port": 3000,
+    "varastokansio":"jsonvarasto",
     "sivut": {
         "kansio": "sivut",
         "valikko": "valikko.html",
