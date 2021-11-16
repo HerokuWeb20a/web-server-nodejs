@@ -7,7 +7,7 @@ const kirjastopolku = path.join(__dirname, 'kirjasto');
 const { lue } = require(path.join(kirjastopolku, 'tiedostokasittelija'));
 const { laheta, onJoukossa } = require(path.join(kirjastopolku, 'resurssilahettaja'));
 
-const resurssiReitit = ['/tyylit/'];
+const resurssiReitit = ['/tyylit/','/js/','/img/'];
 
 const sivutkansio = path.join(__dirname, sivut.kansio);
 const valikkoPolku = path.join(sivutkansio, sivut.valikko);
