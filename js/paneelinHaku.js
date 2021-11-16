@@ -7,7 +7,7 @@
             const paneelit = await data.json();
             const paneeliData = document.getElementById('paneeliData');
 
-            for(let paneeli of paneelit){
+            for (let paneeli of paneelit) {
                 const tr = document.createElement('tr');
 
                 tr.appendChild(teeSolu(paneeli.id));
@@ -20,11 +20,8 @@
 
                 paneeliData.appendChild(tr);
             }
-
-        }
-        catch(virhe){
-            document.getElementById('viestialue').innerHTML=`
-            <p class="virhe">${virhe.message}</p>`;
+        } catch(virhe) {
+            document.getElementById('viestialue').innerHTML = `<p class="virhe">${virhe.message}</p>`;
         }
     }
 
