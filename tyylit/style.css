@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root{
     --primary-color: #3A405A;
     --link-color: #F9DEC9;
@@ -13,45 +14,53 @@
 html {
     scroll-behavior: smooth;
 }
+
 h1,
 h2,
 h3,
 .herotext,
-.paragraph{
+.paragraph {
     color: var(--primary-color);
 }
-h3{
+
+h3 {
     text-align: right;
 }
-body{
-    font: var(--font);
+
+body {
     background-color: white;
 }
-table{
+
+table {
     border-collapse: collapse;
     margin-bottom: 1em;
 }
-td,th{
+
+td,th {
     border: 1px solid var(--primary-color);
     padding: 0.5em;
 }
-header{
+
+header {
     background-color: var(--primary-color);
     justify-content: center;
     display: flex;
     padding: 25px;
 }
-button{
+
+button {
     padding: 10px;
     background-color: white;
     color: var(--primary-color);
     border-radius: 0.5em;
     border-color: var(--primary-color);
 }
-button:hover{
+
+button:hover {
     background-color: var(--primary-color);
     color: var(--link-color);
 }
-link{
+
+link {
     color: var(--link-color);
 }

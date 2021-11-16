@@ -1,10 +1,7 @@
-const {
-    haeKaikkiVarastosta,
-} = require('./varastoapu');
+const { haeKaikkiVarastosta } = require('./varastoapu');
 
 module.exports = class Tietovarasto{
-
-    haeKaikki(){
+    haeKaikki() {
         return haeKaikkiVarastosta();
     }
 }
