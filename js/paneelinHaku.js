@@ -1,8 +1,8 @@
 (function() {
     document.addEventListener('DOMContentLoaded', alusta);
 
-    async function alusta(){
-        try{
+    async function alusta() {
+        try {
             const data = await fetch('/paneeli'); 
             const paneelit = await data.json();
             const paneeliData = document.getElementById('paneeliData');
@@ -28,7 +28,7 @@
     function teeSolu(tieto){
         const td = document.createElement('td');
 
-        td.textContent=tieto;
+        td.textContent = tieto;
         return td;
     }
 })();
