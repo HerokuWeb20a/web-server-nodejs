@@ -25,4 +25,4 @@ function onJoukossa(reitti, ...reittienAlkuosat) {
     return false;
 }
 
-module.exports = { laheta, onJoukossa, lahetaJson, lahetaStatus };
+module.exports = { laheta, onJoukossa, lahetaJson };
