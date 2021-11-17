@@ -26,8 +26,10 @@ h3,
 .paragraph {
     color: var(--primary-color);
 }
-h1{
+
+h1 {
     text-align: center;
+    text-decoration: underline;
 }
 
 h3 {
@@ -57,9 +59,10 @@ header {
     display: flex;
     padding: 25px;
 }
-.taulukko{
+
+.taulukko {
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     align-items: center;
@@ -67,23 +70,40 @@ header {
     justify-items: center;
 }
 
-button {
-    padding: 10px;
+.taulukko h1 {
+    padding-bottom: 25px;
+}
+
+.button {
+    width: 250px;
+    height: 40px;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+}
+
+.taulukko a {
+    padding-top: 25px;
+    text-decoration: none;
+}
+
+.button {
     background-color: white;
     color: var(--primary-color);
-    border-radius: 5px;
-    border-color: var(--primary-color);
+    border-radius: 3px;
+    border: 1px solid var(--primary-color);
 }
-button:hover {
+
+.button:hover {
     background-color: var(--primary-color);
     color: var(--link-color);
-    border: 1px solid var(--primary-color);
 }
 
 link {
     color: var(--link-color);
 }
-link:hover{
+
+link:hover {
     color: var(--link-color);
     text-decoration-color: var(--link-color);
 }
