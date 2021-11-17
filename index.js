@@ -17,7 +17,7 @@ const { muodostaOlio, muodostaSivu, muodostaRivit } = require(path.join(kirjasto
 const Tietovarasto = require(path.join(__dirname, varastokansio, 'tietovarastokerros'));
 const varasto = new Tietovarasto();
 
-const resurssiReitit = ['/tyylit/', '/kuvat/'];
+const resurssiReitit = ['/tyylit/', '/kuvat/', '/js/'];
 
 const palvelin = http.createServer(async (req, res) => {
     const { pathname } = new URL(`http://${host}:${port}${req.url}`);
