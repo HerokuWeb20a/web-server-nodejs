@@ -26,6 +26,9 @@ h3,
 .paragraph {
     color: var(--primary-color);
 }
+h1{
+    text-align: center;
+}
 
 h3 {
     text-align: right;
@@ -39,6 +42,10 @@ body {
 table {
     border-collapse: collapse;
     margin-bottom: 1em;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 td, th {
@@ -60,13 +67,16 @@ button {
     border-radius: 5px;
     border-color: var(--primary-color);
 }
-
 button:hover {
     background-color: var(--primary-color);
     color: var(--link-color);
-    border-color: var(--primary-color);
+    border: 1px, solid, var(--primary-color);
 }
 
 link {
     color: var(--link-color);
+}
+link:hover{
+    color: var(--link-color);
+    text-decoration-color: var(--link-color);
 }
