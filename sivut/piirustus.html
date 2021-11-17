@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="fi">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../tyylit/style.css">
     <title>Pohja piirustus</title>
 </head>
+
 <body>
     <header>
-        <img src="../kuvat/logo-white.svg">
-        <a href="/paneeli"><button>Paneeli data</button></a>
-        <a href="/"><button>Valikko</button></a>
+        <a href="/"><img src="../kuvat/logo-white.svg"></a>
     </header>
 
-    <img id="kuva" src="../kuvat/piirros.png" style="width:500px">
-    
-    <button class="button" id="nappi" onclick="document.getElementById('kuva').src = '../kuvat/piirrosA.png'">Priorisoi abitti</button>
-    <button class="button" id="nappi" onclick="document.getElementById('kuva').src = '../kuvat/piirros.png'">Palauta</button>
+    <div class="piirustus-taulukko">
+        <img id="kuva" src="../kuvat/piirros.png" style="width:500px">
+
+        <button class="button" onclick="document.getElementById('kuva').src = '../kuvat/piirrosA.png'">Priorisoi abitti</button>
+        <button class="button" onclick="document.getElementById('kuva').src = '../kuvat/piirros.png'">Palauta</button>
+        <a href="/"><div class="button">Valikko</div></a>
+    </div>
 </body>
+
 </html>

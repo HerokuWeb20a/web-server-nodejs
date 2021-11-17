@@ -35,11 +35,6 @@ h3 {
     text-align: right;
 }
 
-body {
-    font-family: var(--font);
-    background-color: white;
-}
-
 table {
     border-collapse: collapse;
     margin-bottom: 1em;
@@ -59,7 +54,12 @@ header {
     padding: 25px;
 }
 
-.taulukko {
+a {
+    text-decoration: none;
+}
+
+.valikko-taulukko,
+.paneeli-taulukko {
     position: absolute;
     top: 35%;
     left: 50%;
@@ -69,7 +69,17 @@ header {
     justify-items: center;
 }
 
-.taulukko h1 {
+.piirustus-taulukko {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    display: grid;
+    justify-items: center;
+}
+
+.paneeli-taulukko h1 {
     padding-bottom: 25px;
 }
 
@@ -79,23 +89,34 @@ header {
     align-items: center;
     justify-items: center;
     display: grid;
-}
-
-.taulukko a {
-    padding-top: 25px;
-    text-decoration: none;
-}
-
-.button {
     background-color: white;
     color: var(--primary-color);
     border-radius: 3px;
     border: 1px solid var(--primary-color);
+    font-size: 14px;
 }
 
 .button:hover {
     background-color: var(--primary-color);
     color: var(--link-color);
+}
+
+.paneeli-taulukko a {
+    padding-top: 25px;
+}
+
+.valikko-taulukko a {
+    margin-top: 5px;
+}
+
+.piirustus-taulukko .button {
+    margin-top: 5px;
+}
+
+#kuva {
+    border: 2px solid var(--primary-color);
+    margin-bottom: 25px;
+    border-radius: 3px;
 }
 
 link {
@@ -105,4 +126,9 @@ link {
 link:hover {
     color: var(--link-color);
     text-decoration-color: var(--link-color);
+}
+
+::selection {
+    color: var(--primary-color);
+    background: var(--link-color);
 }
