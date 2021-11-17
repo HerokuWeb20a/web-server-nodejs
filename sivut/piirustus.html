@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="fi">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../tyylit/style.css">
     <title>Pohja piirustus</title>
 </head>
+
 <body>
     <header>
         <img src="../kuvat/logo-white.svg">
@@ -13,8 +15,9 @@
     </header>
 
     <img id="kuva" src="../kuvat/piirros.png" style="width:500px">
-    
-    <button class="button" id="nappi" onclick="document.getElementById('kuva').src = '../kuvat/piirrosA.png'">Priorisoi abitti</button>
-    <button class="button" id="nappi" onclick="document.getElementById('kuva').src = '../kuvat/piirros.png'">Palauta</button>
+
+    <button class="button" onclick="document.getElementById('kuva').src = '../kuvat/piirrosA.png'">Priorisoi abitti</button>
+    <button class="button" onclick="document.getElementById('kuva').src = '../kuvat/piirros.png'">Palauta</button>
 </body>
+
 </html>
