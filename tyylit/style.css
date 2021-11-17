@@ -59,7 +59,7 @@ header {
     padding: 25px;
 }
 
-.taulukko {
+.paneeli-taulukko {
     position: absolute;
     top: 35%;
     left: 50%;
@@ -69,7 +69,7 @@ header {
     justify-items: center;
 }
 
-.taulukko h1 {
+.paneeli-taulukko h1 {
     padding-bottom: 25px;
 }
 
@@ -81,7 +81,7 @@ header {
     display: grid;
 }
 
-.taulukko a {
+.paneeli-taulukko a {
     padding-top: 25px;
     text-decoration: none;
 }
@@ -96,6 +96,26 @@ header {
 .button:hover {
     background-color: var(--primary-color);
     color: var(--link-color);
+}
+
+.piirustus-taulukko {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    display: grid;
+    justify-items: center;
+}
+
+.piirustus-taulukko .button {
+    margin-top: 5px;
+}
+
+#kuva {
+    border: 2px solid var(--primary-color);
+    margin-bottom: 25px;
+    border-radius: 3px;
 }
 
 link {
