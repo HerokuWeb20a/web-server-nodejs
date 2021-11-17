@@ -2,26 +2,24 @@ const http = require('http');
 const path = require('path');
 
 const { host, port, sivut, varastokansio } = require('./config.json');
-const { lueVarasto } = require('./jsonvarasto/varastokasittelija');
 
 const kirjastopolku = path.join(__dirname, 'kirjasto');
 const { lue } = require(path.join(kirjastopolku, 'tiedostokasittelija'));
-const { laheta, onJoukossa, lahetaJson } = require(path.join(kirjastopolku, 'resurssilahettaja'));
+const { laheta, onJoukossa } = require(path.join(kirjastopolku, 'resurssilahettaja'));
 
 const sivutkansio = path.join(__dirname, sivut.kansio);
 const valikkoPolku = path.join(sivutkansio, sivut.valikko);
 const paneeliPolku = path.join(sivutkansio, sivut.paneeli);
 const piirustusPolku = path.join(sivutkansio, sivut.piirustus);
 
-const Tietovarasto = 
-require(path.join(__dirname,varastokansio,'tietovarastokerros'));
+const { muodostaOlio, muodostaSivu, muodostaRivit } = require(path.join(kirjastopolku, 'kasittelija'));
 
-const varasto=new Tietovarasto();
+const Tietovarasto = require(path.join(__dirname, varastokansio, 'tietovarastokerros'));
+const varasto = new Tietovarasto();
 
-const resurssiReitit = ['/tyylit/','/js/','/img/'];
+const resurssiReitit = ['/tyylit/', '/kuvat/'];
 
-
-const server = http.createServer(async (req, res) => {
+const palvelin = http.createServer(async (req, res) => {
     const { pathname } = new URL(`http://${host}:${port}${req.url}`);
     const reitti = decodeURIComponent(pathname);
     const metodi = req.method.toUpperCase();
@@ -31,8 +29,9 @@ const server = http.createServer(async (req, res) => {
             if (reitti === '/') {
                 laheta(res, await lue(valikkoPolku), 200);
             } else if (reitti === '/paneeli') {
-                laheta(res, await lue(paneeliPolku), 200);
-                lahetaJson(res, await varasto.haeKaikki());
+                lahetaSivu(res, paneeliPolku, {
+                    rivit: muodostaRivit(await varasto.haeKaikki())
+                });
             } else if (reitti === '/piirustus') {
                 laheta(res, await lue(piirustusPolku), 200);
             } else if (onJoukossa(reitti, ...resurssiReitit)) {
@@ -47,10 +46,19 @@ const server = http.createServer(async (req, res) => {
     }
 });
 
-server.listen(port, (err) => {
+palvelin.listen(port, (err) => {
     if (!err) {
-        console.log(`Listening ${host}:${port}`);
+        console.log('Palvelin käynnissä!');
+        console.log(`Kuuntelee ${host}:${port}`);
     } else {
         console.log(`[ERROR]: ${err}`);
     }
 });
+
+async function lahetaSivu(res, polku, data) {
+    const sivuData = await lue(polku);
+    const olio = muodostaOlio(data);
+
+    sivuData.tiedostoData = muodostaSivu(sivuData.tiedostoData, olio);
+    laheta(res, sivuData, 200);
+}

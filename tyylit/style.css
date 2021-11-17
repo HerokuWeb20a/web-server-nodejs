@@ -4,15 +4,19 @@
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --primary-color: #3A405A;
     --link-color: #F9DEC9;
     --secondary-color: #99B2DD;
-    --font: "Segoe UI";
+    --font: 'Segoe UI';
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
 }
 
 h1,
