@@ -60,9 +60,8 @@ nav {
 }
 
 .nav-links {
+    position: absolute;
     display: flex;
-    justify-content: space-between;
-    width: 15%;
 }
 
 .nav-links li {
@@ -76,15 +75,12 @@ nav {
     font-weight: bold;
     border-bottom: 1px solid transparent;
     transition: all 0.2s ease-in;
+    margin: 10px;
 }
 
 .nav-links a:hover {
     border-bottom: 1px solid var(--link-color);
     color: rgba(249, 222, 201, 0.8);
-}
-
-.lang {
-    display: flex;
 }
 
 .lang a {
@@ -165,4 +161,21 @@ link:hover {
 ::selection {
     color: var(--primary-color);
     background: var(--link-color);
+}
+
+@media screen and (max-width: 900px) {
+    .logo {
+        display: none;
+    }
+
+    .nav-links {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #kuva {
+        width: 350px;
+        height: 350px;
+    }
 }
