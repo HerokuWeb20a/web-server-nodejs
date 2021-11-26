@@ -169,22 +169,25 @@ link:hover {
     border-width: 2px;
     border-style: solid;
     border-top-style: none;
-    border-right-style: none;
+    border-right-style: var(--primary-color);
     max-width: 300px;
     max-height: 120px;
-  }
-  #prosent {
+    margin-top: 50px;
+}
+
+#prosent {
     position: absolute;
     top: 20px;
     left: -50px;
     font-size: 12px;
-  }
-  #prosent2 {
-      position: absolute;
-      top: 105px;
-      left: -36px;
-      font-size: 12px;
-  }
+}
+
+#prosent2 {
+    position: absolute;
+    top: 105px;
+    left: -40px;
+    font-size: 12px;
+}
 
 @media screen and (max-width: 900px) {
     .logo {
