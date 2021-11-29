@@ -192,13 +192,15 @@ link:hover {
     left: -40px;
     font-size: 12px;
 }
-#paiv1{
+
+#paiv1 {
     position: absolute;
     top: 120px;
     left: 90px;
     font-size: 12px;
 }
-#paiv2{
+
+#paiv2 {
     position: absolute;
     top: 120px;
     left: 190px;
