@@ -48,7 +48,6 @@ const palvelin = http.createServer(async (req, res) => {
 
 palvelin.listen(port, (err) => {
     if (!err) {
-        console.log('Palvelin käynnissä!');
         console.log(`Kuuntelee ${host}:${port}`);
     } else {
         console.log(`[ERROR]: ${err}`);
