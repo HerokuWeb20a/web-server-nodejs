@@ -6,10 +6,9 @@ let tuo2 = 6;
 let kulutus = (pc + mac + cb);
 let kentta = document.getElementById("kentta");
 
-document.getElementById("data").innerHTML = "(määrä * koneen kulutus * 6) + (määrä * koneen kulutus * 6) + (määrä * koneen kulutus * 6) kaavalla yhteis kulutus määrä on "
-    + kulutus;
+document.getElementById("data").innerHTML = "(määrä * koneen kulutus * 6) + (määrä * koneen kulutus * 6) + (määrä * koneen kulutus * 6) kaavalla yhteis kulutus määrä on " + kulutus;
 
-(function () {
+(function() {
     let piirtoalusta;
     let konteksti;
     let pinta = 0;
