@@ -1,11 +1,8 @@
-const div = document.querySelector('lang');
-const btns = div.getElementsByClassName('btn');
+const buttons = document.querySelectorAll('a');
 
-for (let i = 0; i < btns.length; i++) {
-    btns[i].addEventListener('click', () => {
-        let current = document.getElementsByClassName('active');
-
-        current[0].className = current[0].className.replace(' active', '');
-        this.className += ' active';
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
     });
-}
+});
