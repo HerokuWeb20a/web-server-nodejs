@@ -29,9 +29,9 @@
             </ul>
 
             <div class="lang">
-                <a class="lang-fi" href="/">FI</a>
-                <a class="lang-se" href="/">SE</a>
-                <a class="lang-en" href="/">EN</a>
+                <a class="active" href="#">FI</a> |
+                <a href="#">SE</a>
+                | <a href="#">EN</a>
             </div>
         </nav>
     </header>
@@ -53,17 +53,21 @@
             </thead>
             <tbody>##RIVIT##</tbody>
         </table>
-        <p id="data"></p>
+
+        <p id="data" style="color: var(--primary-color);"></p>
         <a href="/"><div class="button">Valikko</div></a>
     <div>
-        <script src="../js/diagram.js"></script>
-        <div class="kulutus">
-            <canvas id="kentta" width="250px" height="100px"></canvas>
-            <p id="prosent">200 kWh</p>
-            <p id="prosent2">0 kWh</p>
-            <p id="paiv1">1.15.19</p>
-            <p id="paiv2">2.11.20</p>
-        </div>
+    
+    <div class="kulutus">
+        <canvas id="kentta" width="250px" height="100px"></canvas>
+        <p id="prosent">200 kWh</p>
+        <p id="prosent2">0 kWh</p>
+        <p id="paiv1">1.15.19</p>
+        <p id="paiv2">2.11.20</p>
+    </div>
+
+    <script src="../js/diagram.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
