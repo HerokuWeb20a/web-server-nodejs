@@ -1,4 +1,5 @@
-const buttons = document.querySelectorAll('a');
+const container = document.querySelector('.lang');
+const buttons = container.querySelectorAll('a');
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
